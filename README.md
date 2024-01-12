@@ -1,2 +1,12 @@
 # Retriever
-this contains all the functionalities for a retriever in RAG pipeline 
+- Chunking of Documents
+- Embeddings
+- Indexing
+- Retrieving
+- Adavance Retriever
+  - Parent documents
+  - Hybrid Search ( sparse + dense Retriever)
+  - Hierarchical Retriever 
+  - reranker
+
+
