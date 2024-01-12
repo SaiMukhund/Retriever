@@ -15,11 +15,7 @@ from langchain.text_splitter import (
 )
 from transformers import Autotokenizer 
 
-
-
-def read_documents(document):
-    ### to be done 
-    return documents 
+from read_data import read_documents 
 
 def separators(chunker_type,separators_type,separators):
     if chunker_type=="character":
