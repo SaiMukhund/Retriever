@@ -13,7 +13,7 @@ class Indexer(Embedder):
         self.collection_name=collection_name
         super().__init__(embedding_name,embedding_model_path)
         self.client=chromadb.Persistclient(path=self.database_directory,settings=(Settings(anonymized_telemetry=False)))
-        self.collection=self.client.create_collection(self.collection_name)
+        self.collection=self.client.get_collection(self.collection_name)
     
     def retrieval(self,query,top_k=10,search_space=None):
         self.query_embeddings=self.get_embeddings(doc.page_content,True)
