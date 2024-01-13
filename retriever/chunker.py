@@ -29,15 +29,15 @@ def separators(chunker_type,separators_type,separators):
         elif separators_type is None:
             separators=["\n\n","\n"," ",""]
         elif separators_type.lower()=="markdown":
-            separators=RecursiveCharacterTextSplitter.get_separators(Language.MARKDOWN)
+            separators=RecursiveCharacterTextSplitter.get_separators_for_language(Language.MARKDOWN)
         elif separators_type.lower()=="html":
-            separators=RecursiveCharacterTextSplitter.get_separators(Language.HTML)
+            separators=RecursiveCharacterTextSplitter.get_separators_for_language(Language.HTML)
         elif separators_type.lower()=="python":
-            separators=RecursiveCharacterTextSplitter.get_separators(Language.PYTHON)
+            separators=RecursiveCharacterTextSplitter.get_separators_for_language(Language.PYTHON)
         elif separators_type.lower()=="cpp":
-            separators=RecursiveCharacterTextSplitter.get_separators(Language.CPP)
+            separators=RecursiveCharacterTextSplitter.get_separators_for_language(Language.CPP)
         elif separators_type.lower()=="java":
-            separators=RecursiveCharacterTextSplitter.get_separators(Language.JAVA)
+            separators=RecursiveCharacterTextSplitter.get_separators_for_language(Language.JAVA)
         else:
             raise Excpetion(f"cant support such functionality")
         return separators
